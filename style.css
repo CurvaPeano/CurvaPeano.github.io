@@ -1,0 +1,159 @@
+#laterale{
+    width: 30%;
+    float: left;
+    height: 100%;
+    padding-left: 30px;
+    padding-right: 50px;
+    margin: 0px;
+    border: 0px;
+    position: fixed;
+    color: #ffffff;
+}
+#biografia{
+    text-align: justify;
+    width: 90%;
+    height: 60%;
+    overflow-y: auto;
+  scrollbar-width: thin;
+  padding-right: 10px;
+}
+#lateraleinn{
+    height: 80%;
+}
+#rounded{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    display: block;
+    box-shadow: 0 0 5px #112f41;
+}
+
+#ilbody{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('background.jpg');
+    background-position: center;
+    background-size: cover;
+    margin: 0px;
+    border: 0px;
+}
+
+#corpo{
+    background-color: #ffffff;
+    width: 67%;
+    height: calc(100% - 140px);
+    float: right;
+    margin: 0px;
+    border: 0px;
+}
+
+#scomp{
+    float: right;
+    width: 67%;
+    height: 140px;
+}
+
+#scrittura{
+    padding: 70px;
+    padding-top: 5px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    height: 70%;
+    font-size: 17px;
+}
+
+ul#menu {
+    font-size: 21px;
+    margin: 50px 40px;
+    padding: 0;
+    list-style: none;
+    float: left;
+}
+ul#menu li {
+    display: block;
+    margin: 15px;
+    margin-top: 5px;
+    padding: 5px 5px 0px 5px;
+    float: left; /* elementi su singola riga */
+}
+ul#menu li a {
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+ul#menu li.active, ul#menu li:hover {
+    background-color: #cc725a;
+}
+
+body{
+    font-family: raleway,helvetica neue,sans-serif;
+}
+p{
+    text-align: justify;
+}
+
+a:hover{
+    color: blue;
+}
+
+#citazione:hover{
+    color: green;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 50%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #06D85F;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
