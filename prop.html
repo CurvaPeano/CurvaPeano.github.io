@@ -35,8 +35,87 @@
                     Proprietà della Curva
                 </h1>
                 <div id="scrittura">
+<h2>Curva di Lebesgue - Schoenberg</h2>
                     <p>
-                        Consideriamo <a href="https://curvapeano.github.io/def.html#schoenberg">la definizione di Schoenberg della Curva di Lebesgue</a>
+                        Consideriamo <a href="https://curvapeano.github.io/def.html#schoenberg">la definizione di Schoenberg della Curva di Lebesgue</a>.
+                    </p>
+                    <p>
+                        Siano 
+                        \[
+                            \begin{aligned}
+                                a_n\, &= \frac{1}{2^{n+1}}\,f(3^{2n}t)\\
+                                b_n\, &= \frac{1}{2^{n+1}}\,f(3^{2n+1}t)
+                            \end{aligned}
+                        \] le successioni dei termini delle serie, rispettivamente, che formano $x(t)$ e $y(t)$.
+                    </p>
+                    <p>
+                        Poiché entrambe le serie sono uniformemente convergenti, e sono entrambe serie di funzioni continue (per definizione), vale che entrambe le funzioni limite $ x(t) $ e $ y(t) $ sono continue, e pertanto anche la curva parametrica definita tramite queste.
+                    </p>
+                    <p>
+                        Si dimostra adesso che la curva passa per un qualsiasi punto arbitrario $ (x_0,y_0) $, posti $x_0,y_0 \in [0,1]$.
+                    </p>
+                    <p>
+                        Scriviamo \[
+                            x_0=\frac{a_0}{2} + \frac{a_2}{2^{2}} + \frac{a_{4}}{2^{3}} + \cdots, \quad y_0 =\frac{a_1}{2} + \frac{a_2}{2^{2}} + \frac{a_{5}}{2^{3}} + \cdots
+                        \] con i diversi $ a_{i} \in \{0,1\}  $: identifichiamo le coordinate con la loro scrittura in base 2.
+                    </p>
+                    <p>
+                        Definiamo $t_0$ come 
+                        \[
+                            t_0:=\frac{2a_0}{3}+ \frac{2a_1}{3^{2}}+\frac{2a_2}{3^{3}}+\cdots+\frac{2a_{k-1} }{3^{k}}+\frac{2a_{k} }{3^{k+1}}+\cdots
+                        \] 
+                        Sicuramente $t_0 \in [0,1]$, in quanto \[
+                            t_0 = \sum_{i=0}^{+\infty} \frac{2a_i}{3^{i+1}}\le \frac{2}{3} \sum_{i=0}^{+\infty} \left(\frac{1}{3}\right)^i = 1
+                        \]
+                    </p>
+                    <p>
+                        Consideriamo ora un generico $ f(3^{k}t_0) $. Notiamo che \[\begin{gathered}
+                        3^{k}t_0= 3^{k}\,\left(\frac{2a_0}{3}+ \frac{2a_1}{3^{2}}+\frac{2a_2}{3^{3}}+\cdots+\frac{2a_{k-1} }{3^{k}}+\frac{2a_{k} }{3^{k+1}}+\cdots\right) =\\
+                        =2 \cdot \left(3^{k-1}a_0 + 3^{k-2}a_1 + \cdots\right) + \frac{2a_{k} }{3} + \frac{2a_{k+1} }{3^{2}} + \cdots
+                    \end{gathered}\]
+                    </p>
+                    <p>
+                        Poiché la funzione è periodica con periodo $T=2$, sappiamo che \[
+                            f(3^k t_0) = f\left(2 \cdot \left(3^{k-1}a_0 + 3^{k-2}a_1 + \cdots\right) + \frac{2a_{k} }{3} + \frac{2a_{k+1} }{3^{2}} + \cdots\right) = f\left(\frac{2a_{k} }{3} + \frac{2a_{k+1} }{3^{2}} + \cdots\right)
+                        \]
+                        che possiamo ancora scrivere come
+                        \[
+                            f(3^k t_0) = f\left(\frac{2a_{k} }{3} + \sum_{i=0}^{+\infty} \frac{2}{3^{i+2}} a_{k+1+i}\right)
+                        \]
+                    </p>
+                    <p>
+                        Consideriamo ora la serie \[
+                        \sum_{i=0}^{+\infty} \frac{2}{3^{i+2}} a_{k+1+i} \le 2\,\sum_{i=0}^{+ \infty} \frac{1}{3^{i+2}} = \frac{1}{3}
+                        \]
+                        Quindi \[
+                        \alpha:= \sum_{i=0}^{+\infty} \frac{2}{3^{i+2}} a_{k+1+i} \le \frac{1}{3}
+                        \]
+                    </p>
+                    <p>
+                        Tornando al valore della nostra funzione, quindi \[
+                        f(3^k t_0) = f\left(\frac{2a_{k} }{3} + \alpha\right)
+                        \]
+                    </p>
+                    <p>
+                        Se $a_k = 0$, allora \[
+                        f(3^k t_0) = f(\alpha) = 0
+                        \] per definizione, mentre se $a_k = 1$, allora \[
+                        f(3^k t_0) = f(\frac{2}{3} + \alpha) = 1
+                        \] sempre per la definizione data.
+                    </p>
+                    <p>
+                        Pertanto \[
+                            f(3^{k}t_0) = a_{k} 
+                        \] per le proprietà viste sopra. 
+                    </p>
+                    <p>Note queste proprietà, utilizziamo le equazioni parametriche che definiscono la curva per calcolare $ x(t_0) $ e $ y(t_0) $. \begin{gather*}
+                        x(t_0)=\frac{1}{2}f(t_0)+\frac{1}{2^{2}} f(3^{2}t_0)+ \frac{1}{2^{3}}f(3^{4}t_0)+\cdots= \frac{a_0}{2}+\frac{a_2}{2^{2}}+\frac{a_4}{2^{3}} + \cdots = x_0\\
+                        y(t_0)=\frac{1}{2}f(3t_0)+\frac{1}{2^{2}} f(3^{3}t_0)+ \frac{1}{2^{3}}f(3^{5}t_0)+\cdot = \frac{a_1}{2}+\frac{a_3}{2^{2}}+\frac{a_5}{2^{3}}+\cdots = y_0
+                    \end{gather*}</p>
+                    <p>Pertanto, la curva definita dalle equazioni parametriche $ x(t) $ e $ y(t) $ passa per ogni punto del quadrato $ Q $.</p>
+<h2>Curva di Lebesgue - Originale</h2>
+                    <p>
+                        Consideriamo <a href="https://curvapeano.github.io/def.html#originale">la definizione originale della Curva di Lebesgue</a>.
                     </p>
                 </div>
             </div>
