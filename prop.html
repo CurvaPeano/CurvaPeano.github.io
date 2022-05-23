@@ -37,7 +37,7 @@
                 <div id="scrittura">
 <h2>Curva di Lebesgue - Schoenberg</h2>
                     <p>
-                        Consideriamo <a href="https://curvapeano.github.io/def.html#schoenberg">la definizione di Schoenberg della Curva di Lebesgue</a>.
+                        Consideriamo <a href="./def.html#schoenberg">la definizione di Schoenberg della Curva di Lebesgue</a>.
                     </p>
                     <p>
                         Siano 
@@ -46,10 +46,10 @@
                                 a_n\, &= \frac{1}{2^{n+1}}\,f(3^{2n}t)\\
                                 b_n\, &= \frac{1}{2^{n+1}}\,f(3^{2n+1}t)
                             \end{aligned}
-                        \] le successioni dei termini delle serie, rispettivamente, che formano $x(t)$ e $y(t)$.
+                        \] le successioni dei termini delle serie, rispettivamente, che formano $\mathbf{x}(t)$ e $\mathbf{y}(t)$.
                     </p>
                     <p>
-                        Poiché entrambe le serie sono uniformemente convergenti, e sono entrambe serie di funzioni continue (per definizione), vale che entrambe le funzioni limite $ x(t) $ e $ y(t) $ sono continue, e pertanto anche la curva parametrica definita tramite queste.
+                        Poiché entrambe le serie sono uniformemente convergenti, e sono entrambe serie di funzioni continue (per definizione), vale che entrambe le funzioni limite $ \mathbf{x}(t) $ e $ \mathbf{y}(t) $ sono continue, e pertanto anche la curva parametrica definita tramite queste.
                     </p>
                     <p>
                         Si dimostra adesso che la curva passa per un qualsiasi punto arbitrario $ (x_0,y_0) $, posti $x_0,y_0 \in [0,1]$.
@@ -109,15 +109,121 @@
                         \] per le proprietà viste sopra. 
                     </p>
                     <p>Note queste proprietà, utilizziamo le equazioni parametriche che definiscono la curva per calcolare $ x(t_0) $ e $ y(t_0) $. \begin{gather*}
-                        x(t_0)=\frac{1}{2}f(t_0)+\frac{1}{2^{2}} f(3^{2}t_0)+ \frac{1}{2^{3}}f(3^{4}t_0)+\cdots= \frac{a_0}{2}+\frac{a_2}{2^{2}}+\frac{a_4}{2^{3}} + \cdots = x_0\\
-                        y(t_0)=\frac{1}{2}f(3t_0)+\frac{1}{2^{2}} f(3^{3}t_0)+ \frac{1}{2^{3}}f(3^{5}t_0)+\cdot = \frac{a_1}{2}+\frac{a_3}{2^{2}}+\frac{a_5}{2^{3}}+\cdots = y_0
+                        \mathbf{x}(t_0)=\frac{1}{2}f(t_0)+\frac{1}{2^{2}} f(3^{2}t_0)+ \frac{1}{2^{3}}f(3^{4}t_0)+\cdots= \frac{a_0}{2}+\frac{a_2}{2^{2}}+\frac{a_4}{2^{3}} + \cdots = x_0\\
+                        \mathbf{y}(t_0)=\frac{1}{2}f(3t_0)+\frac{1}{2^{2}} f(3^{3}t_0)+ \frac{1}{2^{3}}f(3^{5}t_0)+\cdot = \frac{a_1}{2}+\frac{a_3}{2^{2}}+\frac{a_5}{2^{3}}+\cdots = y_0
                     \end{gather*}</p>
-                    <p>Pertanto, la curva definita dalle equazioni parametriche $ x(t) $ e $ y(t) $ passa per ogni punto del quadrato $ Q $.</p>
+                    <p>Pertanto, la curva definita dalle equazioni parametriche $ \mathbf{x}(t) $ e $ \mathbf{y}(t) $ passa per ogni punto del quadrato $ Q $.</p>
 <h2>Curva di Lebesgue - Originale</h2>
                     <p>
-                        Consideriamo <a href="https://curvapeano.github.io/def.html#originale">la definizione originale della Curva di Lebesgue</a>.
+                        Consideriamo <a href="./def.html#originale">la definizione originale della Curva di Lebesgue</a>, con $Z$ l'insieme di Cantor.
+                    </p>
+                    <p>
+                        Possiamo vedere come, per $t \in Z$, questa definizione della curva coincida con quella data da Schoenberg. Infatti, per 
+                        \[
+                        t=\frac{a_0}{3}+\frac{a_1}{3}+\cdots+\frac{a_n}{3}+\cdots
+                        \]
+                        la curva di Lebesgue originale vale 
+                        \[
+                        \begin{cases}
+                            \displaystyle x=  \frac{1}{2}\left(\frac{a_0}{2}+\frac{a_2}{2^{2}}+\frac{a_4}{2^{3}}+\cdots\right)\\
+                            \displaystyle y= \frac{1}{2}\left(\frac{a_1}{2}+\frac{a_3}{2^{2}} + \frac{a_5}{2^{3}}+\cdots\right)
+                        \end{cases}
+                        \]
+                        Notiamo come gli $a_i \in \{0;2\}$. Definiamo $a_i' := a_i/2$. Gli $a_i'\in \{0;1\}$. Possiamo quindi scrivere 
+                        \[
+                        t=\frac{2a_1'}{3}+\frac{2a_2'}{3}+\cdots+\frac{2a_n'}{3}+\cdots
+                        \]
+                        Se calcoliamo la curva data da Schoenberg utilizzando questo $t$ (curva parametrica data da $\mathbf{x}(t)$ e $\mathbf{y}(t)$), notiamo che otteniamo 
+                        \begin{gather*}
+                        \mathbf{x}(t)= \frac{a_0'}{2}+\frac{a_2'}{2^{2}}+\frac{a_4'}{2^{3}} + \cdots = \frac{1}{2}\left(\frac{a_0}{2}+\frac{a_2}{2^{2}}+\frac{a_4}{2^{3}}+\cdots\right) = x\\
+                        \mathbf{y}(t)= \frac{a_1'}{2}+\frac{a_3'}{2^{2}}+\frac{a_5'}{2^{3}}+\cdots = \frac{1}{2}\left(\frac{a_1}{2}+\frac{a_3}{2^{2}} + \frac{a_5}{2^{3}}+\cdots\right)=y
+                    \end{gather*}
+                    Vale quindi che la curva originale di Lebesgue e quella definita da Schoenberg coincidono per tutti i $t \in Z$.
+                    </p>
+                    <p>
+                        Pertanto, posso affermare che la curva $C$ sia suriettiva. Devo ora dimostrare la sua continuità.
+                    </p>
+                    <p>
+                        Denomino con $C_s$ la curva di Lebesgue definita da Schoenberg: \begin{align*}
+                        C_s:[0,1]&\to [0,1]\times[0,1]\qquad\\ t&\mapsto \left(\mathbf{x}(t), \mathbf{y}(t)\right)
+                        \end{align*}
+                    </p>
+                    <p>
+                        <ul>
+                            <li>Se $t \notin Z$, $C$ è un segmento in un intorno di $t$, e pertanto $C$ è continua in $t$. </li>
+                            <li>
+                                <p>Se $t\in Z$ considero i limiti laterali, e $A$ intorno laterale.</p>
+                                <p>Per la continuità della curva definita da Schoenberg \begin{gather*}
+                                        \exists\, \delta_1:\:\forall\, t'\in Z \:\land\: |t-t'|<\delta_1\\
+                                        \implies\, |C_s(t_1) - C_s(t_2)|=|C_s(t_2) - C_s(t_1)|<\varepsilon/4
+                                    \end{gather*}
+                                </p>
+                                <p>
+                                    Se $A\cap Z \cap B_{\delta_1}(t)=\emptyset$ allora $C$ è continua in $A\cap B_{\delta_1}(t)$ (poiché è un segmento lineare); in caso contrario $\exists\, t_1 \in Z \cap A \cap B_{\delta_1}(t)$
+                                </p>
+                                <p>
+                                    Pongo $\delta=|t-t_1|\le \delta$. Dato $x \in A\cap B_{\delta} (t)$
+                                </p>
+                                <ul>
+                                    <li>
+                                        <p>
+                                            Se $x \in Z$ allora $|C(t_2)-C(t_1)|<\varepsilon$
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Se $x \notin Z$, allora $x$ è stato eliminato da $Z$ insieme al segmento $(t_2, t_3)$, con $t_1,t_2 \in \left(Z\cap A\cap B_{\delta}\right)\cup\{t\}$
+                                        </p>
+                                        <p>
+                                            $C(x) \in [C_s(t_2), C_s(t_3)]$ con $C(t_1), C(t_2) \in B_{\varepsilon} (t)$.
+                                        </p>
+                                        <p>
+                                            Ma poiché <a href="#convesso">$B_{\varepsilon} (t)$ è convesso</a>, allora \[
+                                                C(x)\in B_{\varepsilon} (t)
+                                            \]
+                                            quindi \[
+                                            \forall\, x \in B_{\delta}(t)\cap A \quad |C(t)-C(x)|<\varepsilon
+                                            \] e quindi $C$ è continua.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </p>
                 </div>
+
+                <div id="convesso" class="overlay">
+                    <div class="popup" style="width: 80%; height: 70%">
+                        <h2>Dimostriamo che $B_r(0)$ è convesso in $\mathbb{R}^2$</h2>
+                        <a class="close" href="#">&times;</a>
+                        <div class="content" style="font-size: 25px; height: 90%; max-height: 90%;">
+                            <script type="text/x-mathjax-config">
+                                MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\[','\]']]}});
+                              </script>
+                              <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+                              <p>
+                                Dati due punti generici $\mathbf{x}$ e $\mathbf{y}$ appartenenti a $B_r (0)$, vale necessariamente (per definizione) che \[
+                                ||\mathbf{x}||, ||\mathbf{y}||< r
+                                \]
+                              </p>
+                              <p>
+                                  Se consideriamo ora un qualsiasi punto $\mathbf{P}$ del segmento $[\mathbf{x},\mathbf{y}]$
+                                  \[
+                                  \mathbf{P}= t\mathbf{x} + (1-t)\mathbf{y}
+                                  \]
+                                  con $t\in [0,1]$.
+                                  \begin{gather*} 
+                                    ||\mathbf{P}||= ||t\mathbf{x} + (1-t)\mathbf{y}|| \le ||t\mathbf{x}|| + ||(1-t)\mathbf{y}|| =\\
+                                    = t ||\mathbf{x}|| + (1-t) ||\mathbf{y}|| < tr + (1-t)r = r
+                                  \end{gather*}
+                              </p>
+                              <p>
+                                  Pertanto, anche $\mathbf{P}$ è interno a $B_r (0)$, che è quindi insieme convesso.
+                              </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
     </body>
 </html>
